@@ -22,10 +22,10 @@ for (int i=0; i<N; i++){
 
  std::cout << "\n\n\nStarting Integers \n\n\n" << std::endl;
 
- long int M = 10000;
+ long int M = 1000;
  int int_high = 2147480000;
  int int_low = -2147480000;
- unsigned int un_high = 429496000;
+ unsigned int un_high = 4294967000;
 
  for (int i=1; i<M; i++){
 
