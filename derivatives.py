@@ -23,7 +23,7 @@ exp = np.exp(positions)
 
 h = np.logspace(-16, 1)
 
-fig0, axs0 = plt.subplots(3, 2)
+fig0, axs0 = plt.subplots(3, 2, figsize=[16,9])
 
 for i in range(3):
 
@@ -48,7 +48,7 @@ fig0.suptitle("Cosine")
 
 plt.savefig("cos.png")
 
-fig1, axs1 = plt.subplots(3, 2)
+fig1, axs1 = plt.subplots(3, 2, figsize=[16,9])
 
 for i in range(3):
 

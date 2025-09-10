@@ -22,4 +22,4 @@ The only difference is the first point on J8 is non-zero for the up method. So t
 Numerical Derivatives
 1. The max precision for: forward is about 10^-7, central is about 10^-10, and extrapolated is about 10^-13. The text estimates them to be about: 10^-8 for forward, 10^-11 for central, and 10^-15 for extrapolated. So forward and central are similar while extrapolated is a little off.
 2. Forward should have a slope of O(h), while central is O(h^2), and extrapolated it O(h^4). In the range where algorithmic error dominates, forward has the smallest slope while extropated grows the fastest so this agrees with the model prediction.
-3. Round off error dominates at h smaller than: 10^-8 for forward, 10^-5 for central, and 10^-3 for extrapolated. Beyond these points the error is dominated by algorithmic error.
+3. Round off error dominates at h smaller than: 10^-8 for forward, 10^-5 for central, and 10^-2 for extrapolated. Beyond these points the error is dominated by algorithmic error.

@@ -41,7 +41,7 @@ for i in [0, 3, 5, 8]:
 #fig = plt.plot(x, j0_down)
 
 
-fig, axs = plt.subplots(ncols=2, nrows=2)
+fig, axs = plt.subplots(ncols=2, nrows=2, figsize=[16,9])
 plt.suptitle("Bessel Functions")
 
 
