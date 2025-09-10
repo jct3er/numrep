@@ -1,0 +1,68 @@
+import matplotlib.pyplot as plt
+
+
+
+x = []
+j0_up = []
+j0_down = []
+j3_up = []
+j3_down = []
+j5_up = []
+j5_down = []
+j8_up = []
+j8_down = []
+
+
+for i in [0, 3, 5, 8]:
+    with open(f"bessel{i}.dat", "r") as file:
+        lines = file.readlines()
+        for line in lines[2:]:
+            value = line.split()
+            pos = float(value[0])
+            down = float(value[1])
+            up = float(value[2])
+            if i == 0:
+                x.append(pos)
+                j0_down.append(down)
+                j0_up.append(up)
+            elif i == 3:
+                j3_down.append(down)
+                j3_up.append(up)
+            elif i == 5:
+                j5_down.append(down)
+                j5_up.append(up)
+            elif i == 8:
+                j8_down.append(down)
+                j8_up.append(up)
+
+
+#print(j0_down)
+
+#fig = plt.plot(x, j0_down)
+
+
+fig, axs = plt.subplots(ncols=2, nrows=2)
+plt.suptitle("Bessel Functions")
+
+
+axs[0,0].plot(x, j0_down, label="Down")
+axs[0,0].plot(x, j0_up, label="Up", linestyle="dotted")
+axs[0,0].legend()
+axs[0,1].plot(x, j3_down, label="Down")
+axs[0,1].plot(x, j3_up, label="Up", linestyle="dotted")
+axs[0,1].legend()
+axs[1,0].plot(x, j5_down, label="Down")
+axs[1,0].plot(x, j5_up, label="Up", linestyle="dotted")
+axs[1,0].legend()
+axs[1,1].plot(x, j8_down, label="Down")
+axs[1,1].plot(x, j8_up, label="Up", linestyle="dotted")
+axs[1,1].legend()
+
+axs[0,0].set_title("JO")
+axs[0,1].set_title("J3")
+axs[1,0].set_title("J5")
+axs[1,1].set_title("J8")
+
+
+#plt.show()
+plt.savefig("bessel.png")
